@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#261914" />
+  <title>Beckery — small-batch bakes</title>
+  <meta name="description" content="Beckery: small-batch cakes, cookies, dumplings, banana bread, and a rotating Beck of the Day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Beckery home">Beckery<span>.</span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#menu">Menu</a><a href="#about">About</a><button class="cart-button" id="cartButton">Bag <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SMALL BATCH • MADE WITH A LITTLE CHAOS</p>
+        <h1>Good things happen<br>in the <em>Beckery.</em></h1>
+        <p class="lede">A tiny bakery menu built around a few very good ideas, baked in small batches and meant to disappear quickly.</p>
+        <a class="primary" href="#menu">See what’s baking</a>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a frosted cake">
+        <div class="cake-plate"></div>
+        <div class="cake cake-bottom"></div>
+        <div class="cake filling-one"></div>
+        <div class="cake cake-middle"></div>
+        <div class="cake filling-two"></div>
+        <div class="cake cake-top"></div>
+        <div class="blueberry b1"></div><div class="blueberry b2"></div><div class="blueberry b3"></div>
+        <div class="lemon-slice"></div>
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">TODAY AT THE BECKERY</p><h2>The good stuff.</h2></div>
+        <p>Five things. No filler. Click anything to add it to your bag.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div><p class="eyebrow">WHY “BECKERY”?</p><h2>Because “bakery” was already taken.</h2></div>
+      <p>Beckery is a playful bakery concept inspired by Leonhard Brenner’s <strong>Kitchensink</strong> project: a practical Kotlin web-stack experiment built around small, useful tools. This public storefront is a lightweight adaptation made to be easy to open and share.</p>
+    </section>
+  </main>
+
+  <aside class="cart" id="cart" aria-hidden="true" aria-label="Shopping bag">
+    <div class="cart-head"><h2>Your bag</h2><button id="closeCart" aria-label="Close bag">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot"><div><span>Total</span><strong id="cartTotal">$0.00</strong></div><button id="checkoutButton">Checkout</button><p>Demo checkout — no payment is collected.</p></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <footer><span>Beckery © 2026</span><span>Inspired by Kitchensink.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
